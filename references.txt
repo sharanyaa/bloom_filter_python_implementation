@@ -1,0 +1,6 @@
+References:
+
+https://corte.si/a/code/bloom-filter-rules-of-thumb/index.html
+
+http://stackoverflow.com/questions/32453873/how-to-truncate-a-sha256-key-to-emulate-a-128-key-in-ruby
+

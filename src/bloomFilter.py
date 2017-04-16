@@ -1,7 +1,7 @@
 #!/usr/bin/env
-import bitarray
 from math import ceil, log
 from hashlib import sha256
+import bitarray
 # import mmh3 # broken, doesn't seem to work
 
 
@@ -19,26 +19,23 @@ class BloomFilter:
             log(2.0) * self.__num_bits__ /
             self.__num_items__)
         self.__bit_array__ = bitarray.bitarray(self.__num_bits__)
-        print(self.__num_bits__, self.__num_hashes__,
-              self.__bit_array__.__sizeof__())
+        # print(self.__num_bits__, self.__num_hashes__,
+        #      self.__bit_array__.__sizeof__())
         self.__bit_array__.setall(0)
 
     def add_item(self, item):
         for n in range(self.__num_hashes__):
             bit_index = self.__get_hashed_index__(
                             item, n, self.__num_bits__)
-            print(n, bit_index)
-        self.__bit_array__[bit_index] = 1
-
-    def remove_item(self, item):
-        pass
+            # print(n, bit_index)
+            self.__bit_array__[bit_index] = 1
 
     def maybe_contains(self, item):
         for n in range(self.__num_hashes__):
             bit_index = self.__get_hashed_index__(
                             item, n, self.__num_bits__)
-            print(n, bit_index)
-            if self.__bit_array__[index] != 1:
+            # print(n, bit_index, type(self.__bit_array__[bit_index]))
+            if not self.__bit_array__[bit_index]:
                 return False
         return True
 
@@ -49,5 +46,5 @@ class BloomFilter:
         digest = sha256(item.encode('utf-8')).hexdigest()
         hashA = digest[0:len(digest)//2]
         hashB = digest[len(digest)//2:]
-        hc = int((hashA + n*hashB), 16)
+        hc = int(hashA, 16) + n*int(hashB, 16)
         return hc % filter_size

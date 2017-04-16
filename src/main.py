@@ -27,11 +27,12 @@ def main():
     wrapper = BloomFilterWrapper()
     menu = '\nSpell Checker Dictionar Options: \n 1. Add a word'\
         '\n 2. Remove a word \n 3. Query a word'\
-        '\n 4. Recreate dictionary \n 5. Exit \n Enter choice: '
+        '\n 4. Recreate dictionary \n 5. File input '\
+        '6. Exit \n Enter choice: '
 
     while True:
         choice = int(input(menu))
-        if choice < 1 or choice >= 5:
+        if choice < 1 or choice > 5:
             break
         if choice == 1:
             wrapper.call_add_item(),
@@ -41,6 +42,8 @@ def main():
             wrapper.call_maybe_contains(),
         elif choice == 4:
             wrapper.call_recreate_bit_array()
+        elif choice == 5:
+            path = input('\nEnter input file path: ')
 
 
 if __name__ == '__main__':

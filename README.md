@@ -11,4 +11,4 @@ python3 main.py [optional file path]
 
  ex: python3 main.py /usr/share/dict/american-english
 
-Alternatively, the file path can also be provided by choosing the appropriate action from the menu.
+Alternatively, a file path can also be provided by choosing the appropriate action from the menu.

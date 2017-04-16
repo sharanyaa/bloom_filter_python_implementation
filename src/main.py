@@ -20,9 +20,6 @@ class BloomFilterWrapper:
         else:
             print("Definitely not in dictionary")
 
-    def call_recreate_bit_array(self):
-        self.bloom_filter.recreate_bit_array()
-
 
 def main():
 
@@ -38,8 +35,7 @@ def main():
 
     wrapper = BloomFilterWrapper()
     menu = '\nSpell Checker Dictionary Options:\n 1. Add a word'\
-        '\n 2. Query a word \n 3. Recreate dictionary'\
-        '\n 4. Read an input file '\
+        '\n 2. Query a word \n 3. Read an input file '\
         '\n Any other key - Exit \n Enter choice: '
 
     if len(sys.argv) == 2:
@@ -53,8 +49,6 @@ def main():
         elif choice == "2":
             wrapper.call_maybe_contains(),
         elif choice == "3":
-            wrapper.call_recreate_bit_array()
-        elif choice == "4":
             path = input(' Enter input file path: ')
             read_file(path)
         else:

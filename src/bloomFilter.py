@@ -30,11 +30,16 @@ class BloomFilter:
                 self.__num_items__)
 
         self.__hash_func__ = hash_func
+        # print(self.__hash_func__)
 
         self.__bit_array__ = bitarray.bitarray(self.__num_bits__)
         # print(self.__num_bits__, self.__num_hashes__,
         #      self.__bit_array__.__sizeof__())
         self.__bit_array__.setall(0)
+        print(self.__num_items__,
+              self.__false_positive_rate__,
+              self.__num_hashes__,
+              self.__hash_func__)
 
     def add_item(self, item):
         '''add an item to filter'''

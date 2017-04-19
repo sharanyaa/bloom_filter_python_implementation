@@ -8,3 +8,20 @@ http://www.maxburstein.com/blog/creating-a-simple-bloom-filter/
 
 https://llimllib.github.io/bloomfilter-tutorial/
 
+https://github.com/jaybaird/python-bloomfilter/blob/master/pybloom/pybloom.py
+
+http://blog.michaelschmatz.com/2016/04/11/how-to-write-a-bloom-filter-cpp/
+
+http://www.javamex.com/tutorials/collections/bloom_filter_false_positives_graph.shtml
+
+https://prakhar.me/articles/bloom-filters-for-dummies/
+
+https://ipowerinfinity.wordpress.com/2008/03/02/bloom-filters-designing-a-spellchecker/
+
+https://github.com/llimllib/bloomfilter-tutorial/blob/master/murmurhash.js
+
+https://gist.github.com/josephkern/2897618
+
+http://codekata.com/kata/kata05-bloom-filters/
+
+
